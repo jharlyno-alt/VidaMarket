@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - VidaMarket</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-danger bg-opacity-50">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+            <img src="imagenes/logo horizontal.png" class="rounded" width="150">
+            VIDAMARKET
+        </a>
+
+        <div class="mx-auto">
+            <input class="form-control" style="width:350px;" type="search" placeholder="Buscar en VidaMarket">
+        </div>
+
+        <div>
+            <a href="#" class="fw-bold text-dark me-4">Mensajes</a>
+            <a href="#" class="fw-bold text-dark me-4">Carrito</a>
+            <a href="#" class="fw-bold text-dark">Login</a>
+        </div>
+    </nav>
+
+    <h2 class="text-center text-white mt-4 fw-bold">Tu carrito</h2>
+
+    <!-- CONTENIDO -->
+    <div class="container py-4">
+        <div class="row justify-content-center">
+
+            <!-- IMAGEN PRODUCTO -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="imagenes/moda1.png" class="card-img-top">
+                </div>
+            </div>
+
+            <!-- PANEL DEL CARRITO -->
+            <div class="col-md-4">
+                <div class="card shadow bg-danger bg-opacity-25 text-dark p-4">
+
+                    <h4 class="text-center fw-bold mb-3">Total del carrito</h4>
+
+                    <p><strong>Cantidad:</strong> 1</p>
+                    <p><strong>Subtotal:</strong> US$10.5</p>
+                    <p><strong>Impuestos:</strong> US$5</p>
+
+                    <hr>
+
+                    <p class="fs-5"><strong>Total:</strong> US$15.5</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-between mt-5">
+            <a class="btn btn-warning fw-bold px-4" href="index.html">⬅ Atrás</a>
+            <button class="btn btn-warning fw-bold px-4" onclick="alert('Compra finalizada')">
+                Finalizar Compra ➤
+            </button>
+        </div>
+    </div>
+
+    <!-- JS BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
