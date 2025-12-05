@@ -87,11 +87,11 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white !important;          /* letra blanca */
-    font-size: 4rem;       /* cambia el tamaño aquí */
+    color: white !important;         
+    font-size: 4rem;      
     font-weight: bold;
     text-align: center;
-    z-index: 2;            /* encima del video */
+    z-index: 2;          
 }
 
 
@@ -131,3 +131,25 @@ a:hover {
     background: var(--color-primary);
     border-radius: 20px;
 }
+
+
+.img-box {
+    width: 100%;
+    height: 350px;            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       
+} 
+.prodP-transparente {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);  /* efecto glass */
+}  
