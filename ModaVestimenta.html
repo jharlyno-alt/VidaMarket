@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidaMarket</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- IC BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="estiloProyec.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm py-3">
+    <div class="container">
+
+        <a href="#" class="navbar-brand fs-4 fw-bold"></a>
+
+        <div class="d-flex flex-grow-1 mx-4">
+            <img src="imagenes/logo horizontal.png" class="rounded me-3" width="150">
+            <div class="dropdown me-2">
+                <button class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                    Categoria
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Moda y vestimenta</a></li>
+                    <li><a class="dropdown-item" href="#">Tecnologia y electronica</a></li>
+                    <li><a class="dropdown-item" href="#">Hogar y cocina</a></li>
+                    <li><a class="dropdown-item" href="#">Herramientas y construccion</a></li>
+                </ul>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="form-control border-danger" placeholder="Buscar productos">
+                <button class="btn btn-danger"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+
+        <!-- BOTÓN HAMBUR -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENÚ DESP -->
+        <div class="collapse navbar-collapse" id="navbarNav"> 
+            <ul class="navbar-nav ms-auto fw-semibold"> 
+                <li class="nav-item mx-2"><a href="carrito.html"><i class="bi bi-cart"></i> Carrito</a></li>
+                <li class="nav-item mx-2"><a href="login.html"><i class="bi bi-person"></i> Login</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>

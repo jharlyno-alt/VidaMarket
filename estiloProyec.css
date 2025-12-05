@@ -17,19 +17,45 @@
 body {
     font-family: "Inter", Arial, sans-serif;
     color: var(--color-text);
-    background-color: var(--color-bg);
+    background-color: var(--color-primary-dark);
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-weight: 700;
     color: var(--color-text);
+}
+h4, h5, h6 {
+    font-weight: 700;
+    color: var(--color-bg);
 }
 
 a {
     text-decoration: none;
     color: var(--color-text);
 }
+
+.latido {
+    animation: latidoAnim 1.5s infinite;
+}
+
+@keyframes latidoAnim {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.altura-uniforme {
+    height: 50px;
+}
+.logo {
+    height: 50px; 
+    width: auto; 
+}
+
 
 a:hover {
     color: var(--color-primary);
