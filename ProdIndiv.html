@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,160 +12,129 @@
 
 <body class="bg-light">
 
-<!-- HEADER -->
-<nav class="navbar navbar-light bg-white border-bottom px-3 py-2">
-    <a class="navbar-brand fw-bold text-danger">VIDA MARKET</a>
+    <!-- HEADER -->
+    <nav class="navbar navbar-light bg-white border-bottom px-3 py-2">
+        <a href="index.html" class="navbar-brand fw-bold text-danger">VIDA MARKET</a>
 
-    <form class="d-flex w-50">
-        <input class="form-control" type="search" placeholder="Buscar en VidaMarket">
-        <button class="btn btn-danger ms-2">Buscar</button>
-    </form>
+        <form class="d-flex w-50">
+            <input class="form-control" type="search" placeholder="Buscar en VidaMarket">
+            <button class="btn btn-danger ms-2">Buscar</button>
+        </form>
 
-    <div>
-        <a href="#" class="me-3">Mensajes</a>
-        <a href="#" class="me-3">Carrito</a>
-        <a href="#">Login</a>
-    </div>
-</nav>
+        <div>
+            <a href="carrito.html" class="me-3">Carrito</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
 
-<div class="container my-4">
+    <div class="container my-4">
 
-    <div class="row g-4">
+        <div class="row g-4">
 
-        <!-- GALERÍA -->
-        <div class="col-lg-6">
+            <!-- GALERÍA -->
+            <div class="col-lg-6">
 
-            <img id="mainImage" src="imagenes/moda1.png"
-                 class="img-fluid rounded border">
+                <img id="mainImage" src="imagenes/ROPA2.PNG" class="img-fluid rounded border">
+            </div>
 
-            <div class="d-flex gap-2 mt-3">
-                <img src="https://via.placeholder.com/100"
-                     onclick="changeImage(this.src)"
-                     class="img-thumbnail" width="90">
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+            <div class="col-lg-6">
 
-                <img src="https://via.placeholder.com/100"
-                     onclick="changeImage(this.src)"
-                     class="img-thumbnail" width="90">
+                <h3 class="fw-semibold">Abrigo con pantalon</h3>
 
-                <img src="https://via.placeholder.com/100"
-                     onclick="changeImage(this.src)"
-                     class="img-thumbnail" width="90">
+                <div class="row g-2 mb-3">
 
-                <img src="https://via.placeholder.com/100"
-                     onclick="changeImage(this.src)"
-                     class="img-thumbnail" width="90">
+                    <div class="col-6">
+                        <div class="border rounded p-2 text-center bg-white">
+                            <h5 class="text-danger fw-bold">70</h5>
+                            <p class="small m-0">1 Pieza</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h5>Color</h5>
+                <div class="d-flex gap-2 mb-3">
+                    <button class="btn btn-outline-secondary btn-sm">Marrón</button>
+                    <button class="btn btn-outline-secondary btn-sm">Negro</button>
+                    <button class="btn btn-outline-secondary btn-sm">Beige</button>
+                </div>
+                <h5>Genero</h5>
+                <div class="d-flex gap-2 mb-2">
+                    <button class="btn btn-outline-secondary btn-sm">Masculino</button>
+                    <button class="btn btn-outline-secondary btn-sm">Femenino</button>
+                </div>
+
+                <h5>Detalles del producto</h5>
+                <ul class="small">
+                    <li>Personalizable</li>
+                    <li>Adultos</li>
+                    <li>Material transpirable, secado rápido</li>
+                </ul>
+
+                <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+
             </div>
 
         </div>
 
-        <!-- INFORMACIÓN DEL PRODUCTO -->
-        <div class="col-lg-6">
+        <!-- PRODUCTOS SIMILARES -->
+        <h4 class="mt-5 mb-3">Productos similares</h4>
 
-            <h3 class="fw-semibold">Activewear Private Label Set</h3>
+        <div class="row row-cols-2 row-cols-md-4 g-3">
 
-            <p class="text-muted small">GRS Certified</p>
-
-            <div class="row g-2 mb-3">
-
-                <div class="col-4">
-                    <div class="border rounded p-2 text-center bg-white">
-                        <h5 class="text-danger fw-bold">$12.00</h5>
-                        <p class="small m-0">10–499 sets</p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x350" class="card-img-top">
+                    <div class="card-body text-center">
+                        <p class="small mb-1">Set Seamless Azul</p>
+                        <span class="fw-bold text-danger">$10.99 – $11.60</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-4">
-                    <div class="border rounded p-2 text-center bg-white">
-                        <h5 class="text-danger fw-bold">$11.50</h5>
-                        <p class="small m-0">500–4999 sets</p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x350" class="card-img-top">
+                    <div class="card-body text-center">
+                        <p class="small mb-1">Set Rojo 3 piezas</p>
+                        <span class="fw-bold text-danger">$12.80 – $12.50</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-4">
-                    <div class="border rounded p-2 text-center bg-white">
-                        <h5 class="text-danger fw-bold">$10.50</h5>
-                        <p class="small m-0">5000+ sets</p>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x350" class="card-img-top">
+                    <div class="card-body text-center">
+                        <p class="small mb-1">Set Verde High Waist</p>
+                        <span class="fw-bold text-danger">$11.36 – $11.69</span>
                     </div>
                 </div>
-
             </div>
 
-            <h5>Color</h5>
-            <div class="d-flex gap-2 mb-3">
-                <button class="btn btn-outline-secondary btn-sm">Marrón</button>
-                <button class="btn btn-outline-secondary btn-sm">Negro</button>
-                <button class="btn btn-outline-secondary btn-sm">Beige</button>
-            </div>
-
-            <h5>Detalles del producto</h5>
-            <ul class="small">
-                <li>Personalizable</li>
-                <li>Adultos</li>
-                <li>Material transpirable, secado rápido</li>
-            </ul>
-
-            <button class="btn btn-danger w-100 mt-3">Agregar a la cesta</button>
-
-        </div>
-
-    </div>
-
-    <!-- PRODUCTOS SIMILARES -->
-    <h4 class="mt-5 mb-3">Productos similares</h4>
-
-    <div class="row row-cols-2 row-cols-md-4 g-3">
-        
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x350" class="card-img-top">
-                <div class="card-body text-center">
-                    <p class="small mb-1">Set Seamless Azul</p>
-                    <span class="fw-bold text-danger">$10.99 – $11.60</span>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/300x350" class="card-img-top">
+                    <div class="card-body text-center">
+                        <p class="small mb-1">Set Negro Deportivo</p>
+                        <span class="fw-bold text-danger">$8.20 – $12.50</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x350" class="card-img-top">
-                <div class="card-body text-center">
-                    <p class="small mb-1">Set Rojo 3 piezas</p>
-                    <span class="fw-bold text-danger">$12.80 – $12.50</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x350" class="card-img-top">
-                <div class="card-body text-center">
-                    <p class="small mb-1">Set Verde High Waist</p>
-                    <span class="fw-bold text-danger">$11.36 – $11.69</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card h-100">
-                <img src="https://via.placeholder.com/300x350" class="card-img-top">
-                <div class="card-body text-center">
-                    <p class="small mb-1">Set Negro Deportivo</p>
-                    <span class="fw-bold text-danger">$8.20 – $12.50</span>
-                </div>
-            </div>
         </div>
 
     </div>
 
-</div>
+    <!-- JS -->
+    <script>
+        function changeImage(src) {
+            document.getElementById("mainImage").src = src;
+        }
+    </script>
 
-<!-- JS -->
-<script>
-    function changeImage(src) {
-        document.getElementById("mainImage").src = src;
-    }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

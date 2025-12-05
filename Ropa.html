@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="estiloProyec.css">
-    <script src="script.js"></script>
+    <script src="java.js"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 
             <a href="#" class="navbar-brand fs-4 fw-bold"></a>
             <div class="d-flex align-items-center gap-2">
-                
+
                 <a href="index.html" class="d-flex">
                     <img src="imagenes/logo horizontal.png" class="logo" alt="Logo">
                 </a>
@@ -38,14 +38,16 @@
                         <li><a class="dropdown-item" href="Ropa.html">Ropa</a></li>
                         <li><a class="dropdown-item" href="Tecnologia.html">Tecnologia</a></li>
                         <li><a class="dropdown-item" href="Hogar.html">Hogar</a></li>
-                        <li><a class="dropdown-item" href="Cocina.html">Cocina</a></li>
+                        <li><a class="dropdown-item" href="cocina.html">Cocina</a></li>
                     </ul>
                 </div>
 
                 <div class="input-group altura-uniforme">
-                    <input type="text" class="form-control border-danger" placeholder="Buscar productos">
-                    <button class="btn btn-danger"><i class="bi bi-search"></i></button>
-                </div>
+    <form class="d-flex w-100">
+        <input class="form-control" type="search" placeholder="Buscar en VidaMarket">
+        <button class="btn btn-danger ms-2">Buscar</button>
+    </form>
+</div>
             </div>
 
 
@@ -73,107 +75,134 @@
 
     <section class="container py-5">
 
-        <div class="row">
-            <!-- Moda y vestim -->
-            <div class="col-lg-6">
-                <h3 class="fw-bold mb-4">Moda y vestimenta</h3>
+        <div class="row g-4">
 
-                <!-- PRODUCTO 1 -->
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/moda1.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Pantalones de yoga</h5>
-                        <p class="small mb-1">Bs 10.50 - 12.00 / Pieza</p>
-                        <p class="small text-muted mb-2">10 Sets — Tallas: S, M, L, XL</p>
-
-                        <div class="d-flex gap-2">
-                            <a href="prodIndiv.html" class="btn btn-danger btn-sm">VER</a>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
+            <!-- ---- CARD 1 ---- -->
+            <!-- ---- TARJETA DEL PRODUCTO ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
                     </div>
-                </div>
-
-
-                <!-- PRODUCTO 2 -->
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/moda2.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Vestido de novia</h5>
-                        <p class="small mb-1">Bs 189 / Pieza</p>
-                        <p class="small text-muted mb-2">Tallas S, M, L, XL — Accesorios: Velo</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
                     </div>
-                </div>
-
-                <!-- num -->
-                <div class="text-center mt-4">
-                    <nav>
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
-                            <li class="page-item active"><a class="page-link">1</a></li>
-                            <li class="page-item"><a class="page-link">2</a></li>
-                            <li class="page-item"><a class="page-link">3</a></li>
-                            <li class="page-item"><a class="page-link">&raquo;</a></li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
 
-
-
-            <!-- Tecno y Elect -->
-            <div class="col-lg-6">
-
-                <h3 class="fw-bold mb-4">Tecnología y Electrónica</h3>
-
-                <!-- PROD 1 -->
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/tecno1.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Dron profesional</h5>
-                        <p class="small mb-1">Bs 100,000 - 150,000 / Set</p>
-                        <p class="small text-muted mb-2">Carga 1hr — Vuelo 3hrs — CE ISO</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
+            <!-- ---- CARD 2 ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
                     </div>
                 </div>
-
-                <!-- PROD 2 -->
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/tecno2.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">PC Gamer</h5>
-                        <p class="small mb-1">Bs 5,500 - 80,000 / Set</p>
-                        <p class="small text-muted mb-2">Ryzen — RTX4080 — RAM 32GB</p>
-
-                        <div class="d-flex gap-2">
-                            <a href="producto.html" class="btn btn-danger btn-sm">VER</a>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
+            </div>
+            <!-- ---- CARD 3 ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
                     </div>
                 </div>
-
-
-                <!-- num -->
-                <div class="text-center mt-4">
-                    <nav>
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
-                            <li class="page-item active"><a class="page-link">1</a></li>
-                            <li class="page-item"><a class="page-link">2</a></li>
-                            <li class="page-item"><a class="page-link">3</a></li>
-                            <li class="page-item"><a class="page-link">&raquo;</a></li>
-                        </ul>
-                    </nav>
+            </div>
+            <!-- ---- CARD 1 ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
                 </div>
             </div>
 
-        </div>
+            <!-- ---- CARD 2 ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ---- CARD 3 ---- -->
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="text-center prodP-transparente">
+                    <div class="img-box">
+                        <img src="imagenes/ROPA2.PNG" class="img-producto">
+                    </div>
+                    <div class="d-flex gap-2 justify-content-center mt-2">
+                        <a href="ProdIndiv.html" class="btn btn-danger btn-sm">
+                            VER
+                        </a>
+                        <button class="btn btn-danger btn-sm" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
     </section>
 
 
@@ -246,79 +275,6 @@
                 onclick="scrollCarousel(350)">
                 <i class="bi bi-chevron-right"></i>
             </button>
-        </div>
-    </section>
-
-    <!-- HOGAR & HERRAM -->
-    <section class="container py-5">
-        <div class="row">
-
-            <!-- IHogar y cocina -->
-            <div class="col-lg-6">
-                <h3 class="fw-bold text-center mb-4">Hogar y cocina</h3>
-
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/HOGAR2.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Taza</h5>
-                        <p class="small mb-1">Bs 3 / Pieza</p>
-                        <p class="small text-muted mb-1">1 Pieza</p>
-                        <p class="small text-muted mb-2">Material: Porcelana<br>Colores: Verde, Azul</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/HOGAR3.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Platos</h5>
-                        <p class="small mb-1">Bs 20 / Pieza</p>
-                        <p class="small text-muted mb-1">4 Piezas</p>
-                        <p class="small text-muted mb-2">Porcelana — Varias Presentaciones</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- Herram y construc -->
-            <div class="col-lg-6">
-                <h3 class="fw-bold text-center mb-4">Herramientas y construcción</h3>
-
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/herra1.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Prensa hidráulica</h5>
-                        <p class="small mb-1">Bs 100,000 – 150,000 / Set</p>
-                        <p class="small text-muted mb-2">1 Pieza • Garantía 1 Año</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex border rounded p-3 mb-4">
-                    <img src="imagenes/herra2.png" class="rounded me-3" width="150">
-                    <div>
-                        <h5 class="fw-semibold mb-1">Generador 50 kW</h5>
-                        <p class="small mb-1">Bs 5,500 – 80,000 / Set</p>
-                        <p class="small text-muted mb-2">1 Pieza • Diesel Automático</p>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-danger btn-sm">VER</button>
-                            <button class="btn btn-outline-secondary btn-sm">Chat</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
 
