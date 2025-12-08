@@ -1,0 +1,92 @@
+<button class="btn btn-outline-dark mb-3" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#panelFiltros">
+    Mostrar / Ocultar Filtros
+</button>
+
+
+
+<div id="panelFiltros" class="collapse show">
+
+    <div class="contenedor-filtros p-3 border rounded" style="max-width: 350px;">
+
+        <div class="encabezado-filtros d-flex justify-content-between align-items-center mb-3">
+            <h4 class="titulo-filtros fw-bold m-0">Filtrar por</h4>
+            <a href="#" class="btn-limpiar-filtros text-decoration-none">QUITAR FILTRO</a>
+        </div>
+
+        <div class="grupo-filtro mb-3 border-bottom pb-2">
+            <button class="seccion-filtro btn w-100 d-flex justify-content-between p-0" 
+                    data-bs-toggle="collapse" data-bs-target="#filtroGenero">
+                <span class="titulo-seccion fw-bold">Género</span>
+                <i class="bi bi-chevron-down icono-rotar"></i>
+            </button>
+
+            <div id="filtroGenero" class="contenido-filtro collapse mt-2">
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Hombre</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Mujer</div>
+            </div>
+        </div>
+
+        <div class="grupo-filtro mb-3 border-bottom pb-2">
+            <button class="seccion-filtro btn w-100 d-flex justify-content-between p-0"
+                    data-bs-toggle="collapse" data-bs-target="#filtroTalla">
+                <span class="titulo-seccion fw-bold">Talla</span>
+                <i class="bi bi-chevron-down icono-rotar"></i>
+            </button>
+
+            <div id="filtroTalla" class="contenido-filtro collapse mt-2">
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Xxl (5)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> L (67)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> S (62)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Xl (62)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> M (55)</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Xs (21)</div>
+            </div>
+        </div>
+
+        <div class="grupo-filtro mb-3 border-bottom pb-2">
+            <button class="seccion-filtro btn w-100 d-flex justify-content-between p-0"
+                    data-bs-toggle="collapse" data-bs-target="#filtroColor">
+                <span class="titulo-seccion fw-bold">Color</span>
+                <i class="bi bi-chevron-down icono-rotar"></i>
+            </button>
+
+            <div id="filtroColor" class="contenido-filtro collapse mt-2">
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Negro</div>
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Blanco</div>
+            </div>
+        </div>
+
+        <div class="grupo-filtro mb-3 border-bottom pb-2">
+            <button class="seccion-filtro btn w-100 d-flex justify-content-between p-0"
+                    data-bs-toggle="collapse" data-bs-target="#filtroTamano">
+                <span class="titulo-seccion fw-bold">Tamaño</span>
+                <i class="bi bi-chevron-down icono-rotar"></i>
+            </button>
+
+            <div id="filtroTamano" class="contenido-filtro collapse mt-2">
+                <div class="form-check"><input class="form-check-input" type="checkbox"> Grande (70)</div>
+            </div>
+        </div>
+
+        <div class="grupo-filtro mb-4 border-bottom pb-3">
+            <button class="seccion-filtro btn w-100 d-flex justify-content-between p-0"
+                    data-bs-toggle="collapse" data-bs-target="#filtroPrecio">
+                <span class="titulo-seccion fw-bold">Rangos de precio</span>
+                <i class="bi bi-chevron-down icono-rotar"></i>
+            </button>
+
+            <div id="filtroPrecio" class="contenido-filtro collapse mt-3">
+                <input type="range" class="rango-precio form-range" min="99" max="1599">
+                <div class="valores-precio d-flex justify-content-between fw-semibold">
+                    <span>Bs 99,00</span>
+                    <span>Bs 1.599,00</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-aplicar-filtros btn btn-dark w-100 py-2 fw-bold">APLICAR FILTROS</button>
+    </div>
+
+</div>

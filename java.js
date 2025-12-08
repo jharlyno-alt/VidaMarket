@@ -1,15 +1,15 @@
-// ===================== LISTA DE PRODUCTOS =====================
+// LISTA DE PRODUCTOS 
 const productos = [
-    { id: 1, nombre: "Camiseta Deportiva", precio: 25, descripcion: "Camiseta de algodón 100% en varios colores y tallas", img: "imagenes/ROPA2.PNG" },
-    { id: 2, nombre: "Laptop Tecnología", precio: 1500, descripcion: "Laptop de última generación", img: "imagenes/tec2.png" },
-    { id: 3, nombre: "Taza de Porcelana", precio: 3, descripcion: "Taza de porcelana en colores verde y azul", img: "imagenes/HOGAR2.png" },
-    { id: 4, nombre: "Platos de Porcelana", precio: 20, descripcion: "Juego de 4 piezas de porcelana", img: "imagenes/HOGAR3.png" },
-    { id: 5, nombre: "Prensa Hidráulica", precio: 100000, descripcion: "Prensa hidráulica industrial con garantía", img: "imagenes/herra1.png" },
-    { id: 6, nombre: "Generador 50 kW", precio: 5500, descripcion: "Generador eléctrico automático diesel", img: "imagenes/herra2.png" }
+    { id: 1, nombre: "Se añidio al carrito", precio: 25,  img: "imagenes/ROPA2.PNG" },
+    { id: 2, nombre: "Se añidio al carrito", precio: 1500,  img: "imagenes/tec2.png" },
+    { id: 3, nombre: "Se añidio al carrito", precio: 3, img: "imagenes/HOGAR2.png" },
+    { id: 4, nombre: "Se añidio al carrito", precio: 20, img: "imagenes/HOGAR3.png" },
+    { id: 5, nombre: "Se añidio al carrito", precio: 100000,img: "imagenes/herra1.png" },
+    { id: 6, nombre: "Se añidio al carrito", precio: 5500, img: "imagenes/herra2.png" }
 ];
 
 
-// ===================== FUNCIÓN AGREGAR AL CARRITO =====================
+// FUNCIÓN AGREGAR AL CARRITO 
 function agregarAlCarrito(idProducto) {
     const producto = productos.find(p => p.id === idProducto);
     if (!producto) {
@@ -32,31 +32,31 @@ function agregarAlCarrito(idProducto) {
 }
 
 
+// MOSTRAR CARRITO 
 function mostrarCarrito() {
-    const contenedor = document.getElementById("contenedor-carrito");
+    const contenedor = document.getElementById("contenedorProductos");
+    const totalDiv = document.getElementById("total");
+
     if (!contenedor) return;
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    contenedor.innerHTML = ""; // limpiar
+    contenedor.innerHTML = "";
+    let total = 0;
 
     carrito.forEach(producto => {
-        contenedor.innerHTML += `
-            <div class="d-flex p-3 bg-light shadow-sm rounded mb-3">
-                <img src="${producto.img}" class="me-3" width="120">
+        const subtotal = producto.precio * producto.cantidad;
+        total += subtotal;
 
-                <div class="flex-grow-1">
-                    <h5 class="fw-bold">${producto.nombre}</h5>
-                    <p class="text-muted mb-1">Cantidad: ${producto.cantidad}</p>
-                    <p class="fw-bold">US$${producto.precio}</p>
-                </div>
-
-                <button class="btn btn-outline-danger" onclick="eliminarDelCarrito(${producto.id})">
-                    <i class="bi bi-trash"></i>
-                </button>
-            </div>
+        const div = document.createElement("div");
+        div.classList.add("productoCarrito");
+        div.innerHTML = `
+            <p>${producto.nombre} - $${producto.precio} x ${producto.cantidad} = $${subtotal}</p>
+            <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
         `;
+        contenedor.appendChild(div);
     });
+
+    totalDiv.innerHTML = `<h3>Total: $${total}</h3>`;
 }
 
 function eliminarDelCarrito(idProducto) {
@@ -90,7 +90,7 @@ function cancelarCompra() {
 }
 
 
-// ===================== INICIALIZACIÓN =====================
+// INICIALIZACIÓN
 document.addEventListener("DOMContentLoaded", function() {
     mostrarCarrito();
 });
